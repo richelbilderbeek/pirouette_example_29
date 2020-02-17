@@ -55,9 +55,9 @@ for (i in seq_len(n_phylogenies_per_chain_length)) {
 
   # Save tree to files
   ape::write.tree(phylogeny, file = file.path(example_folder, "true_tree.newick"))
-  png(filename = file.path(example_folder, "true_tree.png"))
-  ape::plot.phylo(phylogeny)
-  dev.off()
+  #png(filename = file.path(example_folder, "true_tree.png"))
+  #ape::plot.phylo(phylogeny)
+  #dev.off()
 
   unique_phylogenies[[i]] <- phylogeny
 }
