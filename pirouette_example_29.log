@@ -1,0 +1,62 @@
+[1] "1 / 5"
+[1] "2 / 5"
+[1] "3 / 5"
+[1] "4 / 5"
+[1] "5 / 5"
+[1] "Phylogeny 1 / 15, MCMC chain length: 1 / 3"
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+[1] "Phylogeny 1 / 15, MCMC chain length: 2 / 3"
+[1] "Phylogeny 1 / 15, MCMC chain length: 3 / 3"
+[1] "Phylogeny 2 / 15, MCMC chain length: 1 / 3"
+[1] "Phylogeny 2 / 15, MCMC chain length: 2 / 3"
+[1] "Phylogeny 2 / 15, MCMC chain length: 3 / 3"
+[1] "Phylogeny 3 / 15, MCMC chain length: 1 / 3"
+[1] "Phylogeny 3 / 15, MCMC chain length: 2 / 3"
+[1] "Phylogeny 3 / 15, MCMC chain length: 3 / 3"
+[1] "Phylogeny 4 / 15, MCMC chain length: 1 / 3"
+[1] "Phylogeny 4 / 15, MCMC chain length: 2 / 3"
+[1] "Phylogeny 4 / 15, MCMC chain length: 3 / 3"
+[1] "Phylogeny 5 / 15, MCMC chain length: 1 / 3"
+[1] "Phylogeny 5 / 15, MCMC chain length: 2 / 3"
+[1] "Phylogeny 5 / 15, MCMC chain length: 3 / 3"
+Saving 7 x 7 in image
+
+
+###############################################################################
+Peregrine Cluster
+Job 9594120 for user 'p230198'
+Finished at: Mon Feb 17 23:19:29 CET 2020
+
+Job details:
+============
+
+Name                : pirouette_example_29
+User                : p230198
+Partition           : regular
+Nodes               : pg-node011
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-02-17T12:20:35
+Start               : 2020-02-17T12:20:38
+End                 : 2020-02-17T23:19:29
+Reserved walltime   : 1-00:00:00
+Used walltime       :   10:58:51
+Used CPU time       :   10:36:00 (efficiency: 96.53%)
+% User (Computation): 97.62%
+% System (I/O)      :  2.38%
+Mem reserved        : 10G/node
+Max Mem used        : 1.01G (pg-node011)
+Max Disk Write      : 71.68K (pg-node011)
+Max Disk Read       : 1.35M (pg-node011)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
