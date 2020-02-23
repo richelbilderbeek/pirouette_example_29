@@ -24,10 +24,18 @@ testit::assert(is_beast2_installed())
 
 # Unique phylogenies
 n_phylogenies_per_chain_length <- 5
+if (is_on_travis()) {
+  n_phylogenies_per_chain_length <- 2
+}
+
 crown_age <- 10
 
 # MCMC chain lengths
 unique_mcmc_chain_lengths <- c(1e6, 1e7, 1e8)
+if (is_on_travis()) {
+  unique_mcmc_chain_lengths <- c(1000, 2000)
+}
+
 n_mcmc_chain_lengths <- length(unique_mcmc_chain_lengths)
 
 # Duplicated phylogenies,
