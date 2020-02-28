@@ -9,7 +9,11 @@
 suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
 library(testthat)
-expect_true(mcbette::can_run_mcbette())
+
+################################################################################
+# Constants
+################################################################################
+is_testing <- is_on_travis()
 
 root_folder <- getwd()
 example_no <- 29
@@ -89,13 +93,8 @@ expect_equal(length(pir_paramses), length(phylogenies))
 # Shorter run on Travis
 ################################################################################
 if (is_testing) {
-  for (i in seq_along(pir_paramses)) {
-    pir_paramses[[i]]$experiments <- shorten_experiments(
-      pir_paramses[[i]]$experiments
-    )
-  }
+  pir_paramses <- shorten_pir_paramses(pir_paramses)
 }
-
 ################################################################################
 # Set the RNG seeds
 ################################################################################
