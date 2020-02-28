@@ -7,7 +7,6 @@
 # reasonably small trees (say in the magnitudes of hundreds of them)
 # with 10:40 taxa
 suppressMessages(library(pirouette))
-suppressMessages(library(ggplot2))
 library(testthat)
 
 ################################################################################
@@ -113,6 +112,7 @@ pir_outs <- pir_runs(
 for (i in seq_along(pir_outs)) {
   pir_save(
     phylogeny = phylogenies[[i]],
+    pir_params = pir_paramses[[i]],
     pir_out = pir_outs[[i]],
     folder_name = folder_names[[i]]
   )
