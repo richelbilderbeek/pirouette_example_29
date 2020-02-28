@@ -50,44 +50,7 @@ expect_equal(length(phylogenies), length(rng_seeds))
 ################################################################################
 # Create pirouette parameter sets
 ################################################################################
-pir_paramses <- list()
-for (i in seq_along(phylogenies)) {
-
-  alignment_params <- create_alignment_params(
-    sim_tral_fun = get_sim_tral_with_std_nsm_fun(
-      mutation_rate = 1.0 / crown_age
-    ),
-    root_sequence = create_blocked_dna(length = 1000)
-  )
-
-  # Hand-pick a generating model
-  # By default, this is JC69, strict, Yule
-  generative_experiment <- create_gen_experiment()
-  # Create the set of candidate birth-death experiments
-  candidate_experiments <- create_all_bd_experiments(
-    exclude_model = generative_experiment$inference_model
-  )
-  # Combine all experiments
-  experiments <- c(list(generative_experiment), candidate_experiments)
-
-  twinning_params <- create_twinning_params(
-    sim_twin_tree_fun = get_sim_bd_twin_tree_fun(),
-    sim_twal_fun = get_sim_twal_same_n_muts_fun(
-      mutation_rate = 1.0 / crown_age,
-      max_n_tries = 10000
-    ),
-    twin_evidence_filename = get_temp_evidence_filename()
-  )
-
-  pir_params <- create_pir_params(
-    alignment_params = alignment_params,
-    experiments = experiments,
-    twinning_params = twinning_params,
-    evidence_filename = get_temp_evidence_filename()
-  )
-
-  pir_paramses[[i]] <- pir_params
-}
+pir_paramseses <- create_std_pir_params(n = length(phylogenies))
 expect_equal(length(pir_paramses), length(phylogenies))
 ################################################################################
 # Shorter run on Travis
