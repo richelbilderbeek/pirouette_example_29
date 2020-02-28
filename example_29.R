@@ -14,8 +14,6 @@ library(testthat)
 # Constants
 ################################################################################
 is_testing <- is_on_travis()
-
-root_folder <- getwd()
 example_no <- 29
 n_replicates <- 5
 unique_mcmc_chain_lengths <- c(1e6, 1e7, 1e8)
