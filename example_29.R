@@ -111,17 +111,10 @@ pir_outs <- pir_runs(
 # Save
 ################################################################################
 for (i in seq_along(pir_outs)) {
-  expect_equal(length(pir_paramses), length(pir_outs))
-  rng_seed <- pir_paramses[[i]]$alignment_params$rng_seed
-  folder_name <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
-
-  utils::write.csv(
-    x = pir_outs[[i]],
-    file = file.path(folder_name, "errors.csv"),
-    row.names = FALSE
+  pir_save(
+    phylogeny = phylogenies[[i]],
+    pir_out = pir_outs[[i]],
+    folder_name = folder_names[[i]]
   )
-
-  pir_plots(pir_outs[[i]]) +
-    ggsave(file.path(folder_name, "errors.png"))
 }
 
