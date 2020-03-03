@@ -6,6 +6,10 @@
 # Write script that shows the true and twin error for a fixed tree prior and
 # reasonably small trees (say in the magnitudes of hundreds of them)
 # with 10:40 taxa
+library(pirouette)
+library(beautier)
+library(beastier)
+library(testthat)
 
 # Constants
 example_no <- 29
