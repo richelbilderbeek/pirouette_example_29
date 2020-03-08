@@ -17,7 +17,7 @@ rng_seed <- 314
 crown_age <- 10
 mcmc_chain_lengths <- c(1e5, 1e6, 1e7, 1e8)
 n_phylogenies_per_mcmc_chain_length <- 5
-is_testing <- is_on_travis()
+is_testing <- is_on_ci()
 if (is_testing) {
   mcmc_chain_lengths <- c(3000, 4000)
   n_phylogenies_per_mcmc_chain_length <- 2
