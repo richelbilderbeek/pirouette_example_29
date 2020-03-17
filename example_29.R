@@ -17,6 +17,7 @@ rng_seed <- 314
 crown_age <- 10
 mcmc_chain_lengths <- c(1e5, 1e6, 1e7, 1e8)
 n_phylogenies_per_mcmc_chain_length <- 5
+folder_name <- paste0("example_", example_no)
 is_testing <- is_on_ci()
 if (is_testing) {
   mcmc_chain_lengths <- c(3000, 4000)
@@ -33,10 +34,13 @@ for (i in seq_len(n_phylogenies_per_mcmc_chain_length)) {
   phylogenies[[i]] <- phylogeny
 }
 # 1 2 3 1 2 3
-phylogenies <- rep(phylogenies, n_phylogenies_per_mcmc_chain_length)
+phylogenies <- rep(phylogenies, n_mcmc_chain_lengths)
 
 # Create pirouette parameter sets
-pir_paramses <- create_std_pir_paramses(n = n_pir_params)
+pir_paramses <- create_std_pir_paramses(
+  n = n_pir_params,
+  folder_name = folder_name
+)
 expect_equal(length(pir_paramses), length(phylogenies))
 if (is_testing) {
   pir_paramses <- shorten_pir_paramses(pir_paramses)
@@ -60,6 +64,12 @@ pir_outs <- pir_runs(
   phylogenies = phylogenies,
   pir_paramses = pir_paramses
 )
+
+# Save summary
+pir_plots(pir_outs) +
+  ggtitle(paste("Number of pir_params: ", n_pir_params)) +
+  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+
 
 # Save
 expect_equal(length(pir_paramses), length(pir_outs))
