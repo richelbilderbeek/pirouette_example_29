@@ -65,13 +65,23 @@ pir_outs <- pir_runs(
   pir_paramses = pir_paramses
 )
 
-# Save summary
-pir_plots(pir_outs) +
-  ggtitle(paste("Number of pir_params: ", n_pir_params)) +
-  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+# Cannot save summary
+# pir_plots(pir_outs) +
+#   ggtitle(paste("Number of pir_params: ", n_pir_params)) +
+#   ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
 
+# Save per MCMC chain length
+for (i in seq_along(mcmc_chain_lengths)) {
+  n <- mcmc_chain_lengths[i]
+  from_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + 1
+  to_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + n_phylogenies_per_mcmc_chain_length
+  pir_plots(
+    pir_outs = pir_outs[from_index:to_index]
+  ) + ggtitle(paste("MCMC chain length:", n)) +
+    ggsave(filename = paste0("errors_", n, ".png"), width = 7, height = 7)
+}
 
-# Save
+# Save individual runs
 expect_equal(length(pir_paramses), length(pir_outs))
 expect_equal(length(pir_paramses), length(phylogenies))
 for (i in seq_along(pir_outs)) {
