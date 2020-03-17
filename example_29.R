@@ -22,7 +22,7 @@ folder_name <- paste0("example_", example_no)
 is_testing <- is_on_ci()
 if (is_testing) {
   mcmc_chain_lengths <- c(3000, 4000)
-  n_phylogenies_per_mcmc_chain_length <- 3
+  n_phylogenies_per_mcmc_chain_length <- 2
 }
 n_mcmc_chain_lengths <- length(mcmc_chain_lengths)
 n_pir_params <- n_mcmc_chain_lengths * n_phylogenies_per_mcmc_chain_length
