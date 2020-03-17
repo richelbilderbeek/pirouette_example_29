@@ -10,6 +10,7 @@ library(pirouette)
 library(beautier)
 library(beastier)
 library(testthat)
+library(gglot2)
 
 # Constants
 example_no <- 29
@@ -21,7 +22,7 @@ folder_name <- paste0("example_", example_no)
 is_testing <- is_on_ci()
 if (is_testing) {
   mcmc_chain_lengths <- c(3000, 4000)
-  n_phylogenies_per_mcmc_chain_length <- 2
+  n_phylogenies_per_mcmc_chain_length <- 3
 }
 n_mcmc_chain_lengths <- length(mcmc_chain_lengths)
 n_pir_params <- n_mcmc_chain_lengths * n_phylogenies_per_mcmc_chain_length
@@ -35,6 +36,7 @@ for (i in seq_len(n_phylogenies_per_mcmc_chain_length)) {
 }
 # 1 2 3 1 2 3
 phylogenies <- rep(phylogenies, n_mcmc_chain_lengths)
+expect_equal(n_pir_params, length(phylogenies))
 
 # Create pirouette parameter sets
 pir_paramses <- create_std_pir_paramses(
@@ -59,11 +61,17 @@ for (i in seq_along(mcmc_chain_lengthses)) {
   }
 }
 
-# Do the runs
-pir_outs <- pir_runs(
-  phylogenies = phylogenies,
-  pir_paramses = pir_paramses
-)
+# Do the runs per MCMC chain length
+pir_outs <- list()
+for (i in seq_along(mcmc_chain_lengths)) {
+  n <- mcmc_chain_lengths[i]
+  from_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + 1
+  to_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + n_phylogenies_per_mcmc_chain_length
+  pir_outs[from_index:to_index] <- pir_runs(
+    phylogenies = phylogenies[from_index:to_index],
+    pir_paramses = pir_paramses[from_index:to_index]
+  )
+}
 
 # Cannot save summary
 # pir_plots(pir_outs) +
