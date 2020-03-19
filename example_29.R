@@ -64,24 +64,14 @@ for (i in seq_along(mcmc_chain_lengthses)) {
 # Do the runs per MCMC chain length
 pir_outs <- vector("list", n_pir_params)
 for (i in seq_along(mcmc_chain_lengths[4])) {
-  print(i)
   n <- mcmc_chain_lengths[i]
-  print(n)
   from_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + 1
   to_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + n_phylogenies_per_mcmc_chain_length
-  print(from_index)
-  print(to_index)
-  expect_true(from_index >= 1)
-  expect_true(to_index <= length(pir_outs))
-  check_pir_paramses(pir_paramses[from_index:to_index])
-
   pir_outs[from_index:to_index] <- pir_runs(
     phylogenies = phylogenies[from_index:to_index],
     pir_paramses = pir_paramses[from_index:to_index]
   )
-  check_pir_outs(pir_outs[from_index:to_index])
 }
-check_pir_outs(pir_outs)
 
 # Save per MCMC chain length
 for (i in seq_along(mcmc_chain_lengths)) {
