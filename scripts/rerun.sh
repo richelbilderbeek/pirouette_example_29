@@ -16,6 +16,7 @@
 #SBATCH --output=example_29.log
 module load R
 
-rm -rf example_29
+#DIRTY HACK
+#rm -rf example_29
 time Rscript example_29.R
 

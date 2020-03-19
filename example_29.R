@@ -63,7 +63,8 @@ for (i in seq_along(mcmc_chain_lengthses)) {
 
 # Do the runs per MCMC chain length
 pir_outs <- list()
-for (i in seq_along(mcmc_chain_lengths)) {
+# DIRTY HACK!
+for (i in seq_along(mcmc_chain_lengths[4])) {
   n <- mcmc_chain_lengths[i]
   from_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + 1
   to_index <- ((i - 1) * n_phylogenies_per_mcmc_chain_length) + n_phylogenies_per_mcmc_chain_length
