@@ -1,0 +1,55 @@
+Loading required package: beautier
+Loading required package: babette
+Loading required package: beastier
+Loading required package: mauricer
+Loading required package: tracerer
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+Error in pirouette::check_pir_out_names(pir_out) : 
+  'tree' must be an element of an 'pir_out'.
+Tip: use 'create_pir_out'
+Calls: pir_plots -> check_pir_out -> <Anonymous>
+Execution halted
+
+real	63m0.249s
+user	59m32.661s
+sys	2m16.881s
+
+
+###############################################################################
+Peregrine Cluster
+Job 10198698 for user 'p230198'
+Finished at: Thu Mar 19 11:51:58 CET 2020
+
+Job details:
+============
+
+Name                : pirex29
+User                : p230198
+Partition           : regular
+Nodes               : pg-node011
+Cores               : 1
+State               : FAILED
+Submit              : 2020-03-19T10:48:56
+Start               : 2020-03-19T10:48:56
+End                 : 2020-03-19T11:51:58
+Reserved walltime   : 1-00:00:00
+Used walltime       :   01:03:02
+Used CPU time       :   01:01:50 (efficiency: 98.10%)
+% User (Computation): 96.31%
+% System (I/O)      :  3.69%
+Mem reserved        : 10G/node
+Max Mem used        : 496.89M (pg-node011)
+Max Disk Write      : 71.68K (pg-node011)
+Max Disk Read       : 1.35M (pg-node011)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
