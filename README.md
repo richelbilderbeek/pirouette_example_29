@@ -8,6 +8,21 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)         
 A [pirouette example](https://github.com/richelbilderbeek/pirouette_examples)
 that shows the effect of MCMC chain length on ESS.
 
+## Running on Peregrine
+
+Install `pirouette` using the [peregrine](https://github.com/richelbilderbeek/peregrine)
+bash and R scripts.
+
+Then, in the main folder of this repo, type:
+
+```
+sbatch scripts/rerun.sh
+```
+
 ## Results
 
-![](example_29_314/errors.png)
+ * Download the intermediate data at 
+   [https://www.richelbilderbeek.nl/pirouette_example_29.zip](https://www.richelbilderbeek.nl/pirouette_example_29.zip)
+
+![](errors.png)
+
