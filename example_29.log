@@ -6,128 +6,13 @@ Loading required package: tracerer
 Registered S3 method overwritten by 'pryr':
   method      from
   print.bytes Rcpp
-Error in pirouette::check_pir_out_names(pir_out) : 
-  'tree' must be an element of an 'pir_out'.
-Tip: use 'create_pir_out'
-Calls: pir_plots -> check_pir_out -> <Anonymous>
-Execution halted
-
-real	40m22.376s
-user	37m37.044s
-sys	1m28.762s
-  adding: example_29/ (stored 0%)
-  adding: example_29/315/ (stored 0%)
-  adding: example_29/315/best_evidence.trees (deflated 58%)
-  adding: example_29/315/best_evidence.log (deflated 64%)
-  adding: example_29/315/evidence.csv (deflated 55%)
-  adding: example_29/315/gen_twin.log (deflated 62%)
-  adding: example_29/315/gen_twin.xml.state (deflated 63%)
-  adding: example_29/315/best_evidence.xml (deflated 75%)
-  adding: example_29/315/best.trees (deflated 67%)
-  adding: example_29/315/best.xml (deflated 74%)
-  adding: example_29/315/gen.xml.state (deflated 63%)
-  adding: example_29/315/gen_errors.csv (deflated 54%)
-  adding: example_29/315/gen_errors_twin.csv (deflated 54%)
-  adding: example_29/315/best_twin.log (deflated 61%)
-  adding: example_29/315/best_evidence.csv (deflated 58%)
-  adding: example_29/315/best_errors_twin.csv (deflated 54%)
-  adding: example_29/315/gen.xml (deflated 72%)
-  adding: example_29/315/best.csv (deflated 54%)
-  adding: example_29/315/best.xml.state (deflated 67%)
-  adding: example_29/315/best_twin.xml (deflated 72%)
-  adding: example_29/315/best_errors.csv (deflated 55%)
-  adding: example_29/315/evidence_twin.csv (deflated 55%)
-  adding: example_29/315/twin.newick (deflated 36%)
-  adding: example_29/315/gen_twin.xml (deflated 71%)
-  adding: example_29/315/best_twin.trees (deflated 59%)
-  adding: example_29/315/alignment.fas (deflated 70%)
-  adding: example_29/315/gen.csv (deflated 55%)
-  adding: example_29/315/alignment_twin.fas (deflated 68%)
-  adding: example_29/315/best_twin.xml.state (deflated 66%)
-  adding: example_29/315/gen.log (deflated 62%)
-  adding: example_29/315/best.log (deflated 65%)
-  adding: example_29/315/gen_twin.trees (deflated 59%)
-  adding: example_29/315/gen.trees (deflated 62%)
-  adding: example_29/315/best_evidence.posterior.trees (deflated 66%)
-  adding: example_29/315/best_evidence.posterior.csv (deflated 68%)
-  adding: example_29/314/ (stored 0%)
-  adding: example_29/314/best_evidence.trees (deflated 61%)
-  adding: example_29/314/best_evidence.log (deflated 64%)
-  adding: example_29/314/evidence.csv (deflated 55%)
-  adding: example_29/314/gen_twin.log (deflated 62%)
-  adding: example_29/314/gen_twin.xml.state (deflated 64%)
-  adding: example_29/314/best_evidence.xml (deflated 76%)
-  adding: example_29/314/best.trees (deflated 67%)
-  adding: example_29/314/best.xml (deflated 75%)
-  adding: example_29/314/gen.xml.state (deflated 63%)
-  adding: example_29/314/gen_errors.csv (deflated 54%)
-  adding: example_29/314/gen_errors_twin.csv (deflated 55%)
-  adding: example_29/314/best_twin.log (deflated 56%)
-  adding: example_29/314/best_evidence.csv (deflated 59%)
-  adding: example_29/314/best_errors_twin.csv (deflated 53%)
-  adding: example_29/314/gen.xml (deflated 72%)
-  adding: example_29/314/best.csv (deflated 54%)
-  adding: example_29/314/best.xml.state (deflated 69%)
-  adding: example_29/314/best_twin.xml (deflated 76%)
-  adding: example_29/314/best_errors.csv (deflated 54%)
-  adding: example_29/314/evidence_twin.csv (deflated 55%)
-  adding: example_29/314/twin.newick (deflated 36%)
-  adding: example_29/314/gen_twin.xml (deflated 74%)
-  adding: example_29/314/best_twin.trees (deflated 67%)
-  adding: example_29/314/alignment.fas (deflated 70%)
-  adding: example_29/314/gen.csv (deflated 54%)
-  adding: example_29/314/alignment_twin.fas (deflated 73%)
-  adding: example_29/314/best_twin.xml.state (deflated 69%)
-  adding: example_29/314/gen.log (deflated 62%)
-  adding: example_29/314/best.log (deflated 66%)
-  adding: example_29/314/gen_twin.trees (deflated 62%)
-  adding: example_29/314/gen.trees (deflated 61%)
-  adding: example_29/314/best_evidence.posterior.trees (deflated 77%)
-  adding: example_29/314/best_evidence.posterior.csv (deflated 61%)
-  adding: example_29/316/ (stored 0%)
-  adding: example_29/316/best_evidence.trees (deflated 63%)
-  adding: example_29/316/best_evidence.log (deflated 66%)
-  adding: example_29/316/evidence.csv (deflated 55%)
-  adding: example_29/316/gen_twin.log (deflated 62%)
-  adding: example_29/316/gen_twin.xml.state (deflated 64%)
-  adding: example_29/316/best_evidence.xml (deflated 75%)
-  adding: example_29/316/best.trees (deflated 67%)
-  adding: example_29/316/best.xml (deflated 73%)
-  adding: example_29/316/gen.xml.state (deflated 63%)
-  adding: example_29/316/gen_errors.csv (deflated 55%)
-  adding: example_29/316/gen_errors_twin.csv (deflated 55%)
-  adding: example_29/316/best_twin.log (deflated 56%)
-  adding: example_29/316/best_evidence.csv (deflated 60%)
-  adding: example_29/316/best_errors_twin.csv (deflated 55%)
-  adding: example_29/316/gen.xml (deflated 72%)
-  adding: example_29/316/best.csv (deflated 54%)
-  adding: example_29/316/best.xml.state (deflated 68%)
-  adding: example_29/316/best_twin.xml (deflated 74%)
-  adding: example_29/316/best_errors.csv (deflated 54%)
-  adding: example_29/316/evidence_twin.csv (deflated 55%)
-  adding: example_29/316/twin.newick (deflated 35%)
-  adding: example_29/316/gen_twin.xml (deflated 72%)
-  adding: example_29/316/best_twin.trees (deflated 67%)
-  adding: example_29/316/alignment.fas (deflated 70%)
-  adding: example_29/316/gen.csv (deflated 54%)
-  adding: example_29/316/alignment_twin.fas (deflated 70%)
-  adding: example_29/316/best_twin.xml.state (deflated 69%)
-  adding: example_29/316/gen.log (deflated 62%)
-  adding: example_29/316/best.log (deflated 56%)
-  adding: example_29/316/gen_twin.trees (deflated 61%)
-  adding: example_29/316/gen.trees (deflated 61%)
-  adding: example_29/316/best_evidence.posterior.trees (deflated 72%)
-  adding: example_29/316/best_evidence.posterior.csv (deflated 62%)
-  adding: example_29.R (deflated 67%)
-  adding: scripts/ (stored 0%)
-  adding: scripts/rerun.sh (deflated 45%)
-  adding: errors_1.png (deflated 16%)
+slurmstepd: error: *** JOB 10231978 ON pg-node211 CANCELLED AT 2020-03-20T23:22:56 DUE TO TIME LIMIT ***
 
 
 ###############################################################################
 Peregrine Cluster
-Job 10210548 for user 'p230198'
-Finished at: Thu Mar 19 17:16:10 CET 2020
+Job 10231978 for user 'p230198'
+Finished at: Fri Mar 20 23:22:57 CET 2020
 
 Job details:
 ============
@@ -135,21 +20,21 @@ Job details:
 Name                : pirex29
 User                : p230198
 Partition           : gelifes
-Nodes               : pg-node224
+Nodes               : pg-node211
 Cores               : 1
-State               : COMPLETED
-Submit              : 2020-03-19T16:35:46
-Start               : 2020-03-19T16:35:47
-End                 : 2020-03-19T17:16:10
+State               : CANCELLED,TIMEOUT
+Submit              : 2020-03-20T13:22:37
+Start               : 2020-03-20T13:22:38
+End                 : 2020-03-20T23:22:57
 Reserved walltime   : 10:00:00
-Used walltime       : 00:40:23
-Used CPU time       : 00:39:05 (efficiency: 96.82%)
-% User (Computation): 96.21%
-% System (I/O)      :  3.79%
+Used walltime       : 10:00:19
+Used CPU time       : 08:09:47 (efficiency: 81.59%)
+% User (Computation): 97.07%
+% System (I/O)      :  2.93%
 Mem reserved        : 10G/node
-Max Mem used        : 494.16M (pg-node224)
-Max Disk Write      : 0.00  (pg-node224)
-Max Disk Read       : 112.64K (pg-node224)
+Max Mem used        : 1.53G (pg-node211)
+Max Disk Write      : 0.00  (pg-node211)
+Max Disk Read       : 112.64K (pg-node211)
 
 
 Acknowledgements:
