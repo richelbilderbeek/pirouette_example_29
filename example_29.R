@@ -84,8 +84,7 @@ for (i in seq_along(mcmc_chain_lengths)) {
       paste(
         "MCMC chain length:", n, ", number of replicates: ", n_phylogenies_per_mcmc_chain_length
       )
-    ) +
-    ggsave(filename = paste0("errors_", i, ".png"), width = 7, height = 7)
+    ); ggsave(filename = paste0("errors_", i, ".png"), width = 7, height = 7)
 }
 
 # Save individual runs
